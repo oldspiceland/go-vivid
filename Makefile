@@ -14,7 +14,7 @@ LDFLAGS=-ldflags "-X github.com/oldspiceland/go-vivid/main.Version=${VERSION} -X
 .DEFAULT_GOAL: $(BINARY)
 
 $(BINARY):
-	go build ${LDFLAGS} -o ${OUTPUT} main.go
+	go build ${LDFLAGS} -o ${BINARY} main.go
 
 .PHONY: install
 install:
