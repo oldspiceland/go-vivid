@@ -12,16 +12,12 @@ var (
 )
 
 func main() {
-	//Begin Flag Setup
-	verS := flag.Bool("v", false, "displays the current version and build time")
-	verL := flag.Bool("version", false, "displays the current version and build time")
-	//End Flag Setup & Parse
-	flag.Parse()
-
-	if *verS == true || *verL == true {
+	action := flagParser()
+	switch {
+	case action == "version":
 		displayVersion(Version, BuildTime)
 		os.Exit(0)
+	case action == "scrape":
+		gvs.Scraper() //TODO: This doesn't go anywhere currently
 	}
-
-	fmt.Println("vim-go")
 }
