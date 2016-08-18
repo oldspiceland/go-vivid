@@ -5,10 +5,10 @@ import (
 )
 
 var (
-	var Version string
-	var BuildTime string
+	Version   string
+	BuildTime string
 )
 
-func DisplayVersion(version, buildTime string) {
+func DisplayVersion() {
 	fmt.Printf("Current Version is %s, built at %s.\n", Version, BuildTime)
 }
