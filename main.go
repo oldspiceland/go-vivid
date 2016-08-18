@@ -19,13 +19,9 @@ func main() {
 	flag.Parse()
 
 	if *verS == true || *verL == true {
-		displayVersion()
+		displayVersion(Version, BuildTime)
 		os.Exit(0)
 	}
 
 	fmt.Println("vim-go")
-}
-
-func displayVersion() {
-	fmt.Printf("Current version is %v built on %v.\n", Version, BuildTime)
 }
