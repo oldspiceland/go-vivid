@@ -1,8 +1,7 @@
 package main
 
 import (
-	"flag"
-	"fmt"
+	"github.com/oldspiceland/go-vivid/gvutils"
 	"os"
 )
 
@@ -12,12 +11,12 @@ var (
 )
 
 func main() {
-	action := flagParser()
+	action := gvutils.FlagParser()
 	switch {
 	case action == "version":
-		displayVersion(Version, BuildTime)
+		gvutils.DisplayVersion(Version, BuildTime)
 		os.Exit(0)
 	case action == "scrape":
-		gvs.Scraper() //TODO: This doesn't go anywhere currently
+		//gvs.Scraper() //TODO: This doesn't go anywhere currently
 	}
 }
