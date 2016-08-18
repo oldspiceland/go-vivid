@@ -9,12 +9,12 @@ VERSION=0.0
 BUILD_TIME=`date +%FT%T%z`
 
 # Setup the ldflags for compilation via go build, interpolate the variables
-LDFLAGS=-ldflags "-X github.com/oldspiceland/go-vivid/main.Version=${VERSION} -X github.com/oldspiceland/go-vivid/main.BuildTime=${BUILD_TIME}"
+LDFLAGS=-ldflags "-X github.com/oldspiceland/go-vivid/gvutils.Version=${VERSION} -X github.com/oldspiceland/go-vivid/gvutils.BuildTime=${BUILD_TIME}"
 
 .DEFAULT_GOAL: $(BINARY)
 
 $(BINARY):
-	go build ${LDFLAGS} -o ${OUTPUT} main.go
+	go build ${LDFLAGS} -o ${BINARY} main.go
 
 .PHONY: install
 install:
