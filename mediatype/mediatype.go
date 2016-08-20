@@ -9,26 +9,26 @@ type Media struct {
 	mediaSize int64
 }
 
-func MediaName() {
-	return mediaName
+func (m *Media) MediaName() string {
+	return m.mediaName
 }
 
-func MediaType() {
-	return mediaType
+func (m *Media) MediaType() string {
+	return m.mediaType
 }
 
-func MediaSize() {
-	return mediaSize
+func (m *Media) MediaSize() int64 {
+	return m.mediaSize
 }
 
-func SetMediaName(newName string) {
-	mediaName = newName
+func (m *Media) SetMediaName(newName string) {
+	m.mediaName = newName
 }
 
-func SetMediaType(newType string) {
-	mediaType = newType
+func (m *Media) SetMediaType(newType string) {
+	m.mediaType = newType
 }
 
-func SetMediaSize(newSize int64) {
-	mediaSize = newSize
+func (m *Media) SetMediaSize(newSize int64) {
+	m.mediaSize = newSize
 }
