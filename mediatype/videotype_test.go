@@ -8,7 +8,7 @@ func setup_video() *Video {
 	v := new(Video)
 	v.mediaName = "Test Video"
 	v.mediaType = "Testable Video"
-	v.mediaSize = 10000000
+	v.mediaSize = 1000000
 	v.mediaFormat = "MPEG Test Video"
 	v.mediaRunTime = "1 hour, 5 minutes"
 	return v
@@ -63,7 +63,7 @@ func TestVideoType(t *testing.T) {
 func TestVideoSize(t *testing.T) {
 	n := setup_video()
 	if n.MediaSize() != 1000000 {
-		t.Errorf("expected 1000000 got %s.\n", n.MediaSize())
+		t.Errorf("expected 1000000 got %v.\n", n.MediaSize())
 	}
 }
 
