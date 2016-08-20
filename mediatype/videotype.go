@@ -8,18 +8,18 @@ type Video struct {
 	mediaRunTime string
 }
 
-func MediaFormat() {
-	return mediaFormat
+func (v *Video) MediaFormat() string {
+	return v.mediaFormat
 }
 
-func MediaRunTime() {
-	return mediaRunTime
+func (v *Video) MediaRunTime() string {
+	return v.mediaRunTime
 }
 
-func SetMediaFormat(newMediaFormat string) {
-	mediaFormat = newMediaFormat
+func (v *Video) SetMediaFormat(newMediaFormat string) {
+	v.mediaFormat = newMediaFormat
 }
 
-func SetMediaRunTime(newMediaRunTime string) {
-	mediaRunTime = newMediaRunTime
+func (v *Video) SetMediaRunTime(newMediaRunTime string) {
+	v.mediaRunTime = newMediaRunTime
 }
