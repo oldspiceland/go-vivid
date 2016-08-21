@@ -12,6 +12,7 @@ func setup() Media {
 	return *m
 }
 
+//TestMediaName is a test function for Media.MediaName function.
 func TestMediaName(t *testing.T) {
 	n := setup()
 	if n.MediaName() != "Test Media" {
@@ -19,6 +20,7 @@ func TestMediaName(t *testing.T) {
 	}
 }
 
+//TestMediaType is a test function for Media.MediaType function.
 func TestMediaType(t *testing.T) {
 	n := setup()
 	if n.MediaType() != "Testable Media" {
@@ -26,6 +28,7 @@ func TestMediaType(t *testing.T) {
 	}
 }
 
+//TestMediaSize is a test function for Media.MediaSize function.
 func TestMediaSize(t *testing.T) {
 	n := setup()
 	if n.MediaSize() != int64(1000000) {
@@ -33,6 +36,7 @@ func TestMediaSize(t *testing.T) {
 	}
 }
 
+//TestSetMediaName is a test function for Media.SetMediaName function.
 func TestSetMediaName(t *testing.T) {
 	n := setup()
 	old := n.MediaName()
@@ -42,6 +46,7 @@ func TestSetMediaName(t *testing.T) {
 	}
 }
 
+//TestSetMediaType is a test function for Media.SetMediaType function.
 func TestSetMediaType(t *testing.T) {
 	n := setup()
 	old := n.MediaType()
@@ -51,6 +56,7 @@ func TestSetMediaType(t *testing.T) {
 	}
 }
 
+//TestSetMediaSize is a test function for Media.SetMediaSize function.
 func TestSetMediaSize(t *testing.T) {
 	n := setup()
 	old := n.MediaSize()
